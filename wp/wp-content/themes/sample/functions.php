@@ -1,0 +1,3 @@
+<?php
+// functionを記述
+?>

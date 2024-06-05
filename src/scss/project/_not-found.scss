@@ -1,0 +1,54 @@
+@use "../global" as g;
+
+.p-notFound {
+  &-contents {
+    padding-bottom: 100px;
+    @include g.sp {
+      padding: 12.5vw 0;
+    }
+    &-inner {
+      padding: 100px 40px 150px;
+      @include g.sp {
+        padding: 14vw 4vw 17.5vw;
+      }
+    }
+  }
+  &__heading {
+    color: #999;
+    @include g.font-size(48);
+    text-align: center;
+    line-height: 1.5;
+    @include g.sp {
+      @include g.font-size(32);
+      @include g.sp {
+        line-height: 1.6;
+      }
+    }
+    ._ja {
+      display: block;
+      color: g.$color-text-main;
+      font-weight: normal;
+      @include g.font-size(20);
+      @include g.sp {
+        @include g.font-size(18);
+      }
+    }
+  }
+  &__text {
+    margin-top: 24px;
+    @include g.font-size(14);
+    line-height: 1.86;
+    text-align: center;
+    @include g.sp {
+      margin-top: 4.5vw;
+    }
+  }
+  &__button {
+    width: 280px;
+    margin: 44px auto 0;
+    @include g.sp {
+      width: 70vw;
+      margin-top: 8.5vw;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@use "../global" as g;
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: #3f4259;
+  color: g.$color-text-main;
+  font-style: normal;
+  font-weight: normal;
+  @include g.font-size(16);
+  line-height: 1.75;
+  letter-spacing: normal;
+  font-family: g.$font-default;
+  @include g.sp {
+    @include g.font-size(15);
+    line-height: 1.6;
+  }
+}
+
+.main {
+  margin-left: 100px;
+  @include g.sp {
+    margin-left: 0;
+  }
+}
+
+.only-pc {
+  display: block;
+  @include g.sp {
+    display: none !important;
+  }
+}
+
+.only-sp {
+  display: none;
+  @include g.sp {
+    display: block !important;
+  }
+}
+
+a {
+  color: g.$color-text-link;
+  text-decoration: none;
+  transition: opacity 0.3s;
+  @include g.hover {
+    opacity: 0.8;
+  }
+}
+
+button {
+  color: inherit;
+  &:focus:not(:focus-visible) {
+    border: none;
+  }
+  &:focus-visible {
+    border: 1px solid g.$color-text-main;
+  }
+}
+
+select,
+option {
+  background: #3f4259;
+  color: g.$color-text-main;
+}

@@ -1,0 +1,33 @@
+@use "../global" as g;
+
+.l-lower-mv {
+  display: flex;
+  position: relative;
+  z-index: 0;
+  height: 200px;
+  background: #75707d;
+  align-items: center;
+  @include g.sp {
+    height: 24vw;
+  }
+  &__heading {
+    display: flex;
+    @include g.font-size(48);
+    color: #fff;
+    line-height: 1.25;
+    letter-spacing: 0.025em;
+    flex-direction: column;
+    align-items: center;
+    @include g.sp {
+      @include g.font-size(22);
+      line-height: 1.6;
+    }
+  }
+}
+
+.l-lower-contents {
+  padding: 100px 0 90px;
+  @include g.sp {
+    padding: 6.25vw 0 12.5vw;
+  }
+}

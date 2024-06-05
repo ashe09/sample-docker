@@ -1,0 +1,22 @@
+@use "../global" as g;
+
+.footer {
+  position: sticky;
+  top: 100vh;
+  margin-left: 100px;
+  @include g.sp {
+    display: flex;
+    margin-left: 0;
+    flex-direction: column-reverse;
+  }
+}
+
+.footer-bottom {
+  padding: 20px;
+  background: #75707d;
+  text-align: center;
+  @include g.font-size(12);
+  @include g.sp {
+    padding: 5vw 2vw;
+  }
+}

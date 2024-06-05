@@ -1,0 +1,49 @@
+@use "../global" as g;
+
+.c-breadcrumb {
+  padding-bottom: 30px;
+  @include g.sp {
+    display: none;
+  }
+  @include g.font-size(14);
+  &__list {
+    display: flex;
+    align-items: center;
+    &-item {
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-100%, -50%) rotate(45deg);
+        width: 6px;
+        height: 6px;
+        border-top: 1px solid #999;
+        border-right: 1px solid #999;
+        content: "";
+      }
+      &:first-child {
+        a {
+          margin-left: 0;
+          padding-left: 0;
+        }
+        &::before {
+          content: none;
+        }
+      }
+      ._link-inner {
+        display: flex;
+        min-width: 32px;
+        padding: 10px 14px 10px 0;
+        align-items: center;
+      }
+      ._no-wrap {
+        white-space: nowrap;
+      }
+    }
+  }
+  span {
+    display: inline-block;
+    padding: 10px 14px;
+  }
+}

@@ -1,0 +1,124 @@
+<% const pageInfo = {
+  url: "/news/",
+  title: "News",
+  description: "News一覧ページです。",
+};
+-%>
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('../include/_head', {meta:pageInfo}); -%>
+<body class="p-news-lists">
+<%- include('../include/_header', {meta:pageInfo}); -%>
+<main class="main">
+  <div class="l-lower-mv">
+    <div class="c-inner">
+      <h1 class="l-lower-mv__heading">
+        <span>News</span>
+      </h1>
+    </div>
+  </div>
+  <div class="l-lower-contents">
+    <div class="c-inner">
+      <div class="p-news-lists-selectArea">
+        <span class="p-news-lists-selectArea__selectBox">
+          <select id="news" class="p-news-lists-selectArea__selectBox-inner" title="西暦を選択してください">
+            <option value="latest">最新</option>
+            <option value="2023">2023年</option>
+            <option value="2022">2022年</option>
+            <option value="2021">2021年</option>
+            <option value="2020">2020年</option>
+          </select>
+        </span>
+      </div>
+      <div class="c-news-contents">
+        <ul class="c-news-list">
+          <li class="c-news-list__item">
+            <a href="/news/001/">
+              <div class="c-news-list__info">
+                <time datetime="2024-12-30" class="c-news-list__date">2024.12.30</time>
+                <div class="c-news-list__label _indigo">ダミーカテゴリ</div>
+              </div>
+              <div class="c-news-list__text">ダミーテキストダミーテキストダミーテキストダミーテキスト</div>
+            </a>
+          </li>
+          <li class="c-news-list__item">
+            <a href="#">
+              <div class="c-news-list__info">
+                <time datetime="2024-09-02" class="c-news-list__date">2024.09.02</time>
+                <div class="c-news-list__label _blue">ダミーカテゴリ</div>
+              </div>
+              <div class="c-news-list__text">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</div>
+            </a>
+          </li>
+          <li class="c-news-list__item">
+            <a href="#">
+              <div class="c-news-list__info">
+                <time datetime="2024-06-20" class="c-news-list__date">2024.06.20</time>
+                <div class="c-news-list__label _gold">ダミーカテゴリ</div>
+              </div>
+              <div class="c-news-list__text">ダミーテキストダミーテキストダミーテキストダミーテキスト</div>
+            </a>
+          </li>
+          <li class="c-news-list__item">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <div class="c-news-list__info">
+                <time datetime="2024-05-31" class="c-news-list__date">2024.05.31</time>
+                <div class="c-news-list__label _purple">ダミーカテゴリ</div>
+              </div>
+              <div class="c-news-list__text">ダミーテキストダミーテキストダミーテキストダミーテキスト</div>
+            </a>
+          </li>
+          <li class="c-news-list__item">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <div class="c-news-list__info">
+                <time datetime="2024-03-22" class="c-news-list__date">2024.03.22</time>
+                <div class="c-news-list__label _blue">ダミーカテゴリ</div>
+              </div>
+              <div class="c-news-list__text">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="c-breadcrumb c-background-gray">
+    <div class="c-inner">
+      <ol class="c-breadcrumb__list">
+        <li class="c-breadcrumb__list-item">
+          <a href="/">
+            <span class="_link-inner">
+              Home
+            </span>
+          </a>
+        </li>
+        <li class="c-breadcrumb__list-item">
+          <span class="_text-inner">News</span>
+        </li>
+      </ol>
+    </div>
+  </div>
+</main>
+<%- include('../include/_footer', {meta:pageInfo}); -%>
+<script type="application/ld+json">
+  {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "/",
+          "name": "Home"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "/news/",
+          "name": "News"
+        }
+      }]
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+<% if (meta.url === "/") { -%>
+  <title><%= meta.title %></title>
+<% } else { -%>
+  <title><%= meta.title %> | Smaple Environment</title>
+<% } -%>
+  <meta name="description" content="<%= meta.description %>">
+<% if (meta.url === "/") { -%>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<%= meta.title %>">
+<% } else { -%>
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="<%= meta.title %> | Smaple Environment">
+<% } -%>
+  <meta property="og:description" content="<%= meta.description %>">
+<% if (meta.url !== "/404.html") { -%>
+  <meta property="og:url" content="https://☓☓☓☓.jp<%= meta.url %>">
+<% } -%>
+  <meta property="og:site_name" content="Smaple Environment">
+  <meta property="og:image" content="https://☓☓☓☓.jp/ogp.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+<% if (meta.url === "/") { -%>
+  <meta name="twitter:title" content="<%= meta.title %>">
+<% } else { -%>
+  <meta name="twitter:title" content="<%= meta.title %> | Smaple Environment">
+<% } -%>
+  <meta name="twitter:description" content="<%= meta.description %>">
+  <meta name="twitter:image" content="https://☓☓☓☓.jp/ogp.jpg">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/android-chrome-192x192.png">
+<% if (meta.url === "/") { -%>
+  <link href="/assets/css/swiper-bundle.css" rel="stylesheet">
+<% } -%>
+  <link href="/assets/css/style.css" rel="stylesheet">
+</head>

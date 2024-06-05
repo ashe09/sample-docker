@@ -1,0 +1,52 @@
+<% const pageInfo = {
+  url: "/404.html",
+  title: "404 Not Found",
+  description: "",
+};
+-%>
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('./include/_head', {meta:pageInfo}); -%>
+<body class="p-notFound">
+<%- include('./include/_header', {meta:pageInfo}); -%>
+<main class="main">
+  <div class="l-lower-contents p-notFound-contents c-background-gray">
+    <div class="c-inner">
+      <div class="p-notFound-contents-inner">
+        <h1 class="p-notFound__heading">
+          <span>404 Not Found</span>
+          <span class="_ja">ページが見つかりません</span>
+        </h1>
+        <div class="p-notFound__button">
+          <a href="/" class="c-button">
+            Homeへ戻る
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<%- include('./include/_footer', {meta:pageInfo}); -%>
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "/",
+        "name": "Home"
+      }
+    }, {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@id": "/404.html",
+        "name": "404 Not Found"
+      }
+    }]
+  }
+</script>
+</body>
+</html>

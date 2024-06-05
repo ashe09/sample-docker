@@ -1,0 +1,38 @@
+@use "../global" as g;
+
+.p-news-lists-selectArea {
+  padding-bottom: 30px;
+  text-align: right;
+  @include g.sp {
+    padding-bottom: 5vw;
+  }
+  &__selectBox {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      transform: translateY(-60%) rotate(135deg);
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid g.$color-text-main;
+      border-right: 2px solid g.$color-text-main;
+      content: "";
+      @include g.sp {
+        right: 5vw;
+        width: 2.5vw;
+        height: 2.5vw;
+        border-width: 0.5vw;
+      }
+    }
+    &-inner {
+      min-width: 150px;
+      border: 1px solid g.$color-text-main;
+      padding: 9px 20px 9px;
+      @include g.sp {
+        min-width: 37.5vw;
+        padding: 2.5vw 5vw;
+      }
+    }
+  }
+}

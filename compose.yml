@@ -1,0 +1,70 @@
+services:
+  mysql:
+    image: mysql:☓☓☓☓
+    platform: linux/x86_64
+    build:
+      context: ./mysql
+      dockerfile: Dockerfile
+    ports:
+      - ☓☓☓☓:☓☓☓☓
+    restart: unless-stopped
+    networks:
+      - wp_net
+    volumes:
+      - mysql_volume:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ☓☓☓☓
+      MYSQL_DATABASE: ☓☓☓☓
+      MYSQL_USER: ☓☓☓☓
+      MYSQL_PASSWORD: ☓☓☓☓
+
+  wordpress:
+    build:
+      context: ./wp
+      dockerfile: Dockerfile
+    container_name: sample
+    restart: unless-stopped
+    depends_on:
+      - mysql
+    networks:
+      - wp_net
+    ports:
+      - ☓☓☓☓:☓☓☓☓
+    volumes:
+      - ./dist:/var/www/html
+      - ./wp/wp-install.sh:/tmp/wp-install.sh
+      - ./wp/wp-content/themes:/var/www/html/wp/wp-content/themes
+      - ./wp/wp-content/plugins:/var/www/html/wp/wp-content/plugins
+      - ./wp/wp-content/uploads:/var/www/html/wp/wp-content/uploads
+    working_dir: /var/www/html/wp
+    environment:
+      WORDPRESS_DB_HOST: mysql:☓☓☓☓
+      WORDPRESS_DB_NAME: ☓☓☓☓
+      WORDPRESS_DB_USER: ☓☓☓☓
+      WORDPRESS_DB_PASSWORD: ☓☓☓☓
+
+  phpmyadmin:
+    image: phpmyadmin:☓☓☓☓
+    restart: unless-stopped
+    depends_on:
+      - mysql
+    networks:
+      - wp_net
+    ports:
+      - ☓☓☓☓:☓☓☓☓
+    environment:
+      - PMA_HOST=mysql
+
+  php:
+    image: php:☓☓☓☓
+    restart: unless-stopped
+    networks:
+      - wp_net
+
+networks:
+  wp_net:
+    driver: bridge
+
+volumes:
+  mysql_volume:
+    driver: local

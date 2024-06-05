@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+dist
+src/setup/*
+
+wp/wp-content/themes/*
+wp/wp-content/plugins/*
+!wp/wp-content/themes/sample

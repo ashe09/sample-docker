@@ -1,0 +1,117 @@
+<% const pageInfo = {
+  url: "/",
+  title: "Home",
+  description: "WordPress・Docker開発環境用のサンプルサイトです。",
+};
+-%>
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('./include/_head', {meta:pageInfo}); -%>
+<body class="p-top">
+<%- include('./include/_header', {meta:pageInfo}); -%>
+<main class="main">
+  <div class="p-top-mv">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="/assets/images/top/mv_01_sp.png" width="798" height="1120" media="(max-width:767px)">
+            <img src="/assets/images/top/mv_01_pc.png" width="1770" height="956" decoding="async" alt="">
+          </picture>
+        </div>
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="/assets/images/top/mv_02_sp.png" width="798" height="1120" media="(max-width:767px)">
+            <img src="/assets/images/top/mv_02_pc.png" width="1770" height="956" decoding="async" alt="">
+          </picture>
+        </div>
+        <div class="swiper-slide">
+          <picture>
+            <source srcset="/assets/images/top/mv_03_sp.png" width="798" height="1120" media="(max-width:767px)">
+            <img src="/assets/images/top/mv_03_pc.png" width="1770" height="956" decoding="async" alt="">
+          </picture>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+  <section class="p-top-news">
+    <div class="c-inner">
+      <h2 class="p-top-heading">
+        <span>News</span>
+      </h2>
+      <div class="c-news-contents _top">
+        <ul class="c-news-list">
+          <li class="c-news-list__item">
+            <a href="/news/001/">
+              <div class="c-news-list__info">
+                <time datetime="2024-12-30" class="c-news-list__date">2024.12.30</time>
+                <div class="c-news-list__label _indigo">ダミーカテゴリ</div>
+              </div>
+              <div class="c-news-list__text">ダミーテキストダミーテキストダミーテキストダミーテキスト</div>
+            </a>
+          </li>
+          <li class="c-news-list__item">
+            <a href="#">
+              <div class="c-news-list__info">
+                <time datetime="2024-09-02" class="c-news-list__date">2024.09.02</time>
+                <div class="c-news-list__label _blue">ダミーカテゴリ</div>
+              </div>
+              <div class="c-news-list__text">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</div>
+            </a>
+          </li>
+          <li class="c-news-list__item">
+            <a href="#">
+              <div class="c-news-list__info">
+                <time datetime="2024-06-20" class="c-news-list__date">2024.06.20</time>
+                <div class="c-news-list__label _gold">ダミーカテゴリ</div>
+              </div>
+              <div class="c-news-list__text">ダミーテキストダミーテキストダミーテキストダミーテキスト</div>
+            </a>
+          </li>
+          <li class="c-news-list__item">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <div class="c-news-list__info">
+                <time datetime="2024-05-31" class="c-news-list__date">2024.05.31</time>
+                <div class="c-news-list__label _purple">ダミーカテゴリ</div>
+              </div>
+              <div class="c-news-list__text">ダミーテキストダミーテキストダミーテキストダミーテキスト</div>
+            </a>
+          </li>
+          <li class="c-news-list__item">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <div class="c-news-list__info">
+                <time datetime="2024-03-22" class="c-news-list__date">2024.03.22</time>
+                <div class="c-news-list__label _blue">ダミーカテゴリ</div>
+              </div>
+              <div class="c-news-list__text">ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</div>
+            </a>
+          </li>
+        </ul>
+        <div class="p-top-news__button">
+          <a href="/news/" class="c-button">
+            More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<%- include('./include/_footer', {meta:pageInfo}); -%>
+<script src="/assets/js/swiper-bundle.js"></script>
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "/",
+        "name": "Home"
+      }
+    }]
+  }
+</script>
+</body>
+</html>

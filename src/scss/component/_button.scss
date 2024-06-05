@@ -1,0 +1,11 @@
+@use "../global" as g;
+
+.c-button {
+  display: block;
+  padding: 15px 10px;
+  border: 1px solid g.$color-text-main;
+  text-align: center;
+  @include g.sp {
+    padding: 3.5vw 2vw;
+  }
+}

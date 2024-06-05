@@ -1,0 +1,93 @@
+<% const pageInfo = {
+  url: "/news/001/",
+  title: "News詳細記事",
+  description: "抜粋テキスト抜粋テキスト抜粋テキスト抜粋テキスト抜粋テキスト",
+};
+-%>
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('../../include/_head', {meta:pageInfo}); -%>
+<body class="p-news-post">
+<%- include('../../include/_header', {meta:pageInfo}); -%>
+<main class="main">
+  <div class="l-lower-mv">
+    <div class="c-inner">
+      <h1 class="l-lower-mv__heading">
+        <span>News</span>
+      </h1>
+    </div>
+  </div>
+  <div class="l-lower-contents c-background-gray">
+    <div class="c-inner">
+      <article class="c-news-contents p-news-post-article">
+        <div class="c-news-list__info">
+          <time datetime="2022-12-30" class="c-news-list__date">2024.12.14</time>
+          <div class="c-news-list__label _gold">ダミーカテゴリ</div>
+        </div>
+        <h2 class="p-news-post__heading">
+          News詳細記事
+        </h2>
+        <p>
+          News詳細記事の内容です。News詳細記事の内容です。News詳細記事の内容です。News詳細記事の内容です。News詳細記事の内容です。
+        </p>
+      </article>
+      <div class="p-news-post__button">
+        <a href="/news/" class="c-button">
+          News一覧に戻る
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="c-breadcrumb c-background-gray">
+    <div class="c-inner">
+      <ol class="c-breadcrumb__list">
+        <li class="c-breadcrumb__list-item">
+          <a href="/">
+            <span class="_link-inner">
+              Home
+            </span>
+          </a>
+        </li>
+        <li class="c-breadcrumb__list-item">
+          <a href="/news/">
+            <span class="_text-inner _no-wrap">News</span>
+          </a>
+        </li>
+        <li class="c-breadcrumb__list-item">
+          <span class="_text-inner">News詳細記事</span>
+        </li>
+      </ol>
+    </div>
+  </div>
+</main>
+<%- include('../../include/_footer', {meta:pageInfo}); -%>
+<script type="application/ld+json">
+  {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "/",
+          "name": "Home"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "/news/",
+          "name": "News"
+        }
+      }, {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "/news/001/",
+          "name": "News詳細記事"
+        }
+      }]
+    }
+</script>
+</body>
+</html>
